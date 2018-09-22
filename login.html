@@ -26,11 +26,12 @@
 					<form class="login-form">
 						<div class="form-group">
 	
-							<input type="text" class="form-control" placeholder="Tischnummer">
+							<input type="text" class="form-control" id="tischNummer" placeholder="Tischnummer" maxlength="50">
 						</div>
  
-						<div class="form-check">
-							<button type="submit" class="btn btn-login float-right">Starten</button>
+						<div class="form-check" align="right">
+							
+							<INPUT TYPE="button" value="Starten" onClick="tischnrAbsenden()"></FORM>
 						</div>
 					</form>	
 				</div>
@@ -74,5 +75,12 @@
 		</div>
 	</section>
 
+	<script type="text/javascript">
+	
+		function tischnrAbsenden() {
+			
+			window.location = "index.html";
+		}
+	</script>
 </body>
 </html>
