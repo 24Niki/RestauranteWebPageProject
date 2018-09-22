@@ -8,3 +8,20 @@
     height: 100%;
 }
 
+#navBarTextBig{
+    color: #E6E6E6;
+	font-size: 130%;
+}
+
+#navBarText{
+    color: #E6E6E6;
+	font-size: 110%;
+}
+
+#navBarTextSmall{
+    color: #848484;
+	font-size: 100%;
+}
+
+
+
