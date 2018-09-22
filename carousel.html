@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>Bootstrap 4 Website Example</title>
+  <title>Startseite</title>
   <
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -35,24 +35,26 @@
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view">
-                <img class="d-block w-100" src="Bilder/wochenkarte.jpg" alt="First slide" width ="auto" height="auto" >
+                <img class="d-block w-100" src="Bilder/startwochenkarte.jpg" alt="First slide" width ="auto" height="auto" >
                 <div class="mask rgba-black-light"></div>
             </div>
             <div class="carousel-caption">
-                <h3>Wochenkarte</h3>
-                <button onClick="towochenkarte()">Hier gelangen Sie zur Wochenkarte</button>
+                
+                <button type="button" onClick="towochenkarte()">Zur Wochenkarte</button>
 				
             </div>
         </div>
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-                <img class="d-block w-100" src="Bilder/pizza.jpg" alt="Second slide" width ="auto" height="auto" >
+                <img class="d-block w-100" src="Bilder/startspeisekarte.jpg" alt="Second slide" width ="auto" height="auto" >
                 <div class="mask rgba-black-strong"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Strong mask</h3>
-                <button onClick="tospeisekarte()">Secondary text</button>
+                <h3>Speisekarte</h3>
+				<br>
+				<br>
+                <button id="zwei" onClick="tospeisekarte()">Zur Speisekarte</button>
             </div>
         </div>
         
