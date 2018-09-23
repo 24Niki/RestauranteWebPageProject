@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Startseite</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<link href="index.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	  <title>Startseite</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <link href="index.css" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	  
 	</head>
 
 	<body>
 		<div class="container-fluid">
-		
 			<!-- Image on Top of the Web Page -->
-			<div class="row">
+			<div class="row" >
 				<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
 			</div>
-			
-			<!-- Navigationsleiste horizontal-->
+		
+		
 			<div class="row">
-					<div class="navbar navbar-expand sticky-top navbar-collapse" id="navColor">
+					<!-- Navigationsleiste horizontal-->
+					<div class="navbar navbar-expand bg-dark sticky-top navbar-collapse" id="navColor">
 						<div class="col-2">
 						</div>
 						
 						<div class="col-1">
-							<a class="navbar-brand" href="index.html">
-								<img src="Bilder/pizzeriaToskanaLogo.png" alt="Home" style="width:250px;" class="float-center">
-							</a>
+							<a class="navbar-brand" href="#">Pizzeria Toskana </a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
+								<span class="navbar-toggler-icon"></span>
+							</button>
 						</div>
 							
 						<div class="col-3">
@@ -44,7 +46,7 @@
 						<div class="col-2">
 							<ul class="navbar-nav ">
 								<li class="nav-item">
-									<a class="nav-link" id="navBarText" href="#">Meine Bestellung</a>
+									<a class="nav-link" id="navBarTextBig" href="#">Meine Bestellung</a>
 								</li>
 							</ul>					
 						</div>		
@@ -52,23 +54,21 @@
 					</div><!-- Navbar-->
 			</div><!-- Row-->
 			
-			
-			<!-- Navigationsleiste vertikal-->
-			
-			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
+					<div class="container">
+					<div class="row">
 					<div class="col-2">
 				  
-						<ul class="nav nav-pills flex-column sticky-top" id="navColor">
+						<ul class="nav nav-pills flex-column bg-dark sticky-top">
 							<li class="nav-item">
-								<a class="navbar-brand" href="index.html">
+							  <a class="navbar-brand" href="#">
 									<img src="Bilder/pizzaIcon.png" alt="Home" style="width:80px;" class="float-center">
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="">
 								<a class="nav-link disabled" href="wochengericht.html" id="navBarText">Wochengericht</a>
 							</li>
-							<li class="nav-item">
+							<li class="">
 								<a class="nav-link disabled" href="vorspeisen.html"id="navBarText">Vorspeisen</a>
 							</li>
 							<li class="nav-item">
@@ -114,52 +114,89 @@
 								<a class="nav-link" href="getraenke.html#alkoholisch" id="navBarTextSmall">Alkoholisch</a>
 							</li>
 						</ul>
-						
-					</div> <!-- col-2 -->
+					</div><!-- Col-->
 				
-				<!-- Page Content-->
+					<div class="col-10">
 				
-				
-					<div class="col-10" >
-						<div class="container" id="back"> <!-- Container 1 -->
+						<div class="container">
 							<br>
 							
-							<!-- Überschrift der Seite -->
+							<!-- Überschrift h1 -->
 							<div class="row justify-content-center">
-							  <img class="img-fluid" src="Bilder/willkommenText.png" alt="Startseite" style="width:600px;" class="float-center">
-							</div>
-							<div class="row">
-								<p id="pStart"> Frisch schmeckt's am besten! Daher wird bei uns jede Portion Pasta einzeln frisch zubereitet.
-									Unsere Pizzen bereiten wir mit hausgemachter Tomatensauce und nur mit echten Mozzarella zu. 
-									Und durch den Holzofen erhalten unsere Pizzen den unvergleichbaren Geschmack - so muss Pizza schmecken!
-								</p>
-							</div>
-							<br>
-							<br>
-							<br>
-							<div class="row">
-								<img src="Bilder/gedecktertischzwei.jpg" alt="Tisch">
+							  <h1>Vorspeisen</h1>
 							</div>
 							
-						</div><!-- Container 1-->
-					</div> <!-- Col-10 -->
-					
-				</div> <!-- div 2 (Row)-->
-	  
-			</div><!-- div 1-->
-			
-			<!-- Fixed footer -->
-			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-				<div class="container">
-					<div class="navbar-text pull-left">
-						<p>© 2018 </p>
-					</div>
-					<div class="navbar-text pull-right">
-						<a href="#help">Hilfe</a> 
+							<br>
+							<div class="row" id="salat">
+							</div>
+							<br>
+							<br>
+							
+							<!-- Bild mit Unterüberschrift-->
+							<div class="row">
+								<div class="col-5 align-self-start">
+									<img src="Bilder/salat.jpg" alt="Salat" class="img-thumbnail" width="400" height="400">
+								</div>
+								<div class="col-5 align-self-center">
+									<h1 class="text-center">Salate</h1>
+								</div>
+							</div>
+							
+							<!-- Liste der Gerichte -->
+							<div class="container">
+								<br>
+								<ul class="list-group">
+								
+									<li class="list-group-item">
+										<div class="row justify-content-start">
+											<h4>Pizza Margherita</h4>
+										</div>
+										<div class="row justify-content-start">
+											<div class="col-10">
+												<p>mit Tomaten und Käse</p>
+											</div>
+											<div class="col-2">
+												<button>Bestellen</button>
+											</div>
+										</div>
+									</li>
+									
+									<li class="list-group-item">
+										<div class="row justify-content-start">
+											<h4>Pizza Tonno</h4>
+										</div>
+										<div class="row justify-content-start">
+											<div class="col-10">
+												<p>mit Thunfisch, Oliven und Zwiebeln</p>
+											</div>
+											<div class="col-2">
+												<button>Bestellen</button>
+											</div>
+										</div>
+									</li>
+									
+									<li class="list-group-item">
+										<div class="row justify-content-start">
+											<h4>Pizza Salami</h4>
+										</div>
+										<div class="row justify-content-start">
+											<div class="col-10">
+												<p>mit Salami</p>
+											</div>
+											<div class="col-2">
+												<button>Bestellen</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+								
+							
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			
-		</div> <!-- Übergeordneter Container -->
+		</div><!-- Container-->
 	</body>
 </html>
