@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Okt 2018 um 17:15
+-- Erstellungszeit: 06. Okt 2018 um 12:24
 -- Server-Version: 10.1.35-MariaDB
 -- PHP-Version: 7.2.9
 
@@ -30,9 +30,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bestellung` (
   `id` int(11) NOT NULL,
-  `tischeid` int(11) NOT NULL,
+  `tischid` int(11) NOT NULL,
   `speisenid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `bestellung`
+--
+
+INSERT INTO `bestellung` (`id`, `tischid`, `speisenid`) VALUES
+(1, 1, 6),
+(2, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -91,8 +99,8 @@ INSERT INTO `tische` (`id`, `tischname`) VALUES
 --
 ALTER TABLE `bestellung`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `tischeid` (`tischeid`),
-  ADD UNIQUE KEY `speisenid` (`speisenid`);
+  ADD KEY `tischid` (`tischid`),
+  ADD KEY `speisenid` (`speisenid`);
 
 --
 -- Indizes für die Tabelle `speisen`
@@ -109,6 +117,12 @@ ALTER TABLE `tische`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
+
+--
+-- AUTO_INCREMENT für Tabelle `bestellung`
+--
+ALTER TABLE `bestellung`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `speisen`
@@ -131,7 +145,7 @@ ALTER TABLE `tische`
 --
 ALTER TABLE `bestellung`
   ADD CONSTRAINT `bestellung_ibfk_1` FOREIGN KEY (`speisenid`) REFERENCES `speisen` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`tischeid`) REFERENCES `tische` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`tischid`) REFERENCES `tische` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

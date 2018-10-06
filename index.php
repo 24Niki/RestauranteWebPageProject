@@ -1,8 +1,13 @@
+<?php
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>Bootstrap 4 Website Example</title>
-  <
+  <title>Pizzeria Toskana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link href="login.css" rel="stylesheet">
@@ -11,10 +16,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
+
 <body>
 	<section class="login-block">
 		<div class="container">
@@ -23,24 +29,27 @@
 				<!--Login Bereich-->
 				<div class="col-md-4 login-sec">
 					<h2 class="text-center">Jetzt Tischnummer registrieren!</h2>
-					<form class="login-form">
+					
+					<form class="login-form" method="post" action="carousel.php">
+					
+						<!-- Eingabefeld für Tischnummer -->
 						<div class="form-group">
-	
-							<input type="text" class="form-control" id="tischNummer" placeholder="Tischnummer" maxlength="50">
+							<input type="text" class="form-control" name="tischNummer" placeholder="Tischnummer" maxlength="50">
 						</div>
- 
+						
 						<div class="form-check" align="right">
-							
-							<INPUT TYPE="button" value="Starten" onClick="tischnrAbsenden()"></FORM>
+							<INPUT TYPE="submit" value="Starten" onClick="tischnrAbsenden()" name="abc"></FORM>
 						</div>
+						
+						
+						
 					</form>	
+				
+					
+					
 					<div class="banner-text">
-										
-
-										<h3 class="text-center">Herzlich Willkommen</h3>
-										
-										
-									</div>	
+						<h3 class="text-center">Herzlich Willkommen</h3>
+					</div>	
 				</div>
 				
 				<!--Bilder-->
@@ -54,29 +63,25 @@
 							<div class="carousel-item active" >
 								<img class="d-block" src="Bilder/gedecktertischzwei.jpg" alt="First slide" width ="780" >
 								<div class="carousel-caption d-none d-md-block">
-									
 								</div>
 							</div>
 							
 							<div class="carousel-item" >
 								<img class="d-block" src="Bilder/wochenkartezwei.jpg" alt="First slide" width ="780" >
 								<div class="carousel-caption d-none d-md-block">
-									
 								</div>
 							</div>
 						</div>	    
 					</div>
 				</div>
-			</div>
-
-		</div>
+				
+			</div><!-- row -->
+		</div><!-- container -->
 	</section>
 
 	<script type="text/javascript">
-	
 		function tischnrAbsenden() {
-			
-			window.location = "carousel.html";
+			window.location = "carousel.php";
 		}
 	</script>
 </body>

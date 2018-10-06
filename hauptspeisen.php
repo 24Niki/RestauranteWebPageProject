@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<title>Hauptspeisen</title>
 		<meta charset="utf-8">
@@ -21,100 +21,19 @@
 			
 			<!-- Navigationsleiste horizontal-->
 			<div class="row">
-					<div class="navbar navbar-expand sticky-top navbar-collapse" id="navColor">
-						<div class="col-2">
-						</div>
-						
-						<div class="col-1">
-							<a class="navbar-brand" href="index.html">
-								<img src="Bilder/pizzeriaToskanaLogo.png" alt="Home" style="width:250px;" class="float-center">
-							</a>
-						</div>
-							
-						<div class="col-3">
-						</div>
-						
-						<div class="col-4">
-							<form class="form-inline " action="/action_page.php">
-								<input class="form-control mr-sm-2" type="text" placeholder="Search">
-								<button class="btn" type="submit">Search</button>
-							</form>
-						</div>
-							
-						<div class="col-2">
-							<ul class="navbar-nav ">
-								<li class="nav-item">
-									<a class="nav-link" id="navBarText" href="#">Meine Bestellung</a>
-								</li>
-							</ul>					
-						</div>		
-						 
-					</div><!-- Navbar-->
+				<?php 
+				    include 'navbarHorizontal.php';
+				    include 'modalBHinzu.php';
+                ?>	
 			</div><!-- Row-->
 			
-			
 			<!-- Navigationsleiste vertikal-->
-			
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
 					<div class="col-2">
-				  
-						<ul class="nav nav-pills flex-column sticky-top" id="navColor">
-							<li class="nav-item">
-								<a class="navbar-brand" href="index.html">
-									<img src="Bilder/pizzaIcon.png" alt="Home" style="width:80px;" class="float-center">
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="wochengericht.html" id="navBarText">Wochengericht</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="vorspeisen.html"id="navBarText">Vorspeisen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vorspeisen.html#salat" id="navBarTextSmall">Salat</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vorspeisen.html#suppe" id="navBarTextSmall">Suppe</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="hauptspeisen.html" id="navBarText">Hauptspeisen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pizza" id="navBarTextSmall">Pizza</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pastaPfanne" id="navBarTextSmall">Pasta aus der Pfanne</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pastaOfen" id="navBarTextSmall">Pasta aus dem Backofen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#fleischgerichte" id="navBarTextSmall">Fleischgerichte</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#fischgerichte" id="navBarTextSmall">Fischgerichte</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#risotto" id="navBarTextSmall">Risotto</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#kleinerHunger" id="navBarTextSmall">FÃ¼r den kleinen Hunger</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="nachspeisen.html" id="navBarText">Dessert</a>
-							</li>					
-							<li class="nav-item">
-								<a class="nav-link disabled" href="getraenke.html" id="navBarText">GetrÃ¤nke</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="getraenke.html#alkoholfrei" id="navBarTextSmall">Alkoholfrei</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="getraenke.html#alkoholisch" id="navBarTextSmall">Alkoholisch</a>
-							</li>
-						</ul>
-						
+				  		<?php 
+        				    include 'navbarVertikal.php';
+                        ?>
 					</div> <!-- col-2 -->
 				
 				<!-- Page Content-->
@@ -160,7 +79,7 @@
 												<p>mit Tomaten und KÃ¤se</p>
 											</div>
 											<div class="col-2">
-												<button>Bestellen</button>
+												<button data-toggle="modal" data-target="#modalBHinzu">Bestellen</button>
 											</div>
 										</div>
 									</li>
@@ -602,6 +521,31 @@
 	  
 			</div><!-- div 1-->
 			
+			<!-- Modal Bestellbestätigung-->
+			  <div class="modal" id="modalBHinzu">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <h4 class="modal-title">Die Bestellung wurde hinzugefügt.</h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer">
+			        	<div class="col">
+			        		<button type="button" class="btn" data-dismiss="modal">Weitere Speisen hinzufügen</button>
+			        	</div>
+			        	<div class="col">
+			        		<button type="button" class="btn" data-dismiss="modal" onClick="toBestellungen()">Zu meinen Bestellungen</button>
+			        	</div>
+			        </div> <!-- /Modal footer -->
+			        
+			      </div><!-- /Modal Content -->
+			    </div>
+			  </div>
+			
 			<!-- Fixed footer -->
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 				<div class="container">
@@ -613,6 +557,14 @@
 					</div>
 				</div>
 			</div>
+			
+			<script type="text/javascript">
+		
+			// Weiterleitung zur Bestellungen-Seite
+			function toBestellungen() {
+				window.location = "bestellung.php";
+			}
+		</script>
 			
 		</div> <!-- Ãœbergeordneter Container -->
 	</body>

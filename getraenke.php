@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Vorspeisen</title>
+		<title>Getränke</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -21,100 +21,19 @@
 			
 			<!-- Navigationsleiste horizontal-->
 			<div class="row">
-					<div class="navbar navbar-expand sticky-top navbar-collapse" id="navColor">
-						<div class="col-2">
-						</div>
-						
-						<div class="col-1">
-							<a class="navbar-brand" href="index.html">
-								<img src="Bilder/pizzeriaToskanaLogo.png" alt="Home" style="width:250px;" class="float-center">
-							</a>
-						</div>
-							
-						<div class="col-3">
-						</div>
-						
-						<div class="col-4">
-							<form class="form-inline " action="/action_page.php">
-								<input class="form-control mr-sm-2" type="text" placeholder="Search">
-								<button class="btn" type="submit">Search</button>
-							</form>
-						</div>
-							
-						<div class="col-2">
-							<ul class="navbar-nav ">
-								<li class="nav-item">
-									<a class="nav-link" id="navBarText" href="#">Meine Bestellung</a>
-								</li>
-							</ul>					
-						</div>		
-						 
-					</div><!-- Navbar-->
+				<?php 
+				    include 'navbarHorizontal.php';
+				    include 'modalBHinzu.php';
+                ?>	
 			</div><!-- Row-->
 			
-			
 			<!-- Navigationsleiste vertikal-->
-			
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
 					<div class="col-2">
-				  
-						<ul class="nav nav-pills flex-column sticky-top" id="navColor">
-							<li class="nav-item">
-								<a class="navbar-brand" href="index.html">
-									<img src="Bilder/pizzaIcon.png" alt="Home" style="width:80px;" class="float-center">
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="wochengericht.html" id="navBarText">Wochengericht</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="vorspeisen.html"id="navBarText">Vorspeisen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vorspeisen.html#salat" id="navBarTextSmall">Salat</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vorspeisen.html#suppe" id="navBarTextSmall">Suppe</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="hauptspeisen.html" id="navBarText">Hauptspeisen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pizza" id="navBarTextSmall">Pizza</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pastaPfanne" id="navBarTextSmall">Pasta aus der Pfanne</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#pastaOfen" id="navBarTextSmall">Pasta aus dem Backofen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#fleischgerichte" id="navBarTextSmall">Fleischgerichte</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#fischgerichte" id="navBarTextSmall">Fischgerichte</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#risotto" id="navBarTextSmall">Risotto</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.html#kleinerHunger" id="navBarTextSmall">Für den kleinen Hunger</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="nachspeisen.html" id="navBarText">Dessert</a>
-							</li>					
-							<li class="nav-item">
-								<a class="nav-link disabled" href="getraenke.html" id="navBarText">Getränke</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="getraenke.html#alkoholfrei" id="navBarTextSmall">Alkoholfrei</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="getraenke.html#alkoholisch" id="navBarTextSmall">Alkoholisch</a>
-							</li>
-						</ul>
-						
+				  		<?php 
+        				    include 'navbarVertikal.php';
+                        ?>
 					</div> <!-- col-2 -->
 				
 				<!-- Page Content-->
@@ -126,12 +45,12 @@
 							
 							<!-- Überschrift der Seite -->
 							<div class="row justify-content-center">
-							  <img src="Bilder/vorspeisen/vorspeisenText2.png" alt="Home" style="width:600px;" class="float-center">
+							  <img src="Bilder/getraenke/getraenkeText.png" alt="Getränke" style="width:600px;" class="float-center">
 							</div>
 							
 							<!-- Sprungmarke ID für Gericht -->
 							<br>
-							<div class="row" id="salat">
+							<div class="row" id="alkoholfrei">
 							</div>
 							<br>
 							<br>
@@ -139,10 +58,10 @@
 							<!-- Bild mit Unterüberschrift-->
 							<div class="row">
 								<div class="col-5 align-self-start">
-									<img src="Bilder/vorspeisen/salat.jpg" alt="Salat" class="img-thumbnail" >
+									<img src="Bilder/getraenke/alkoholfrei.jpg" alt="Alkoholfrei" class="img-thumbnail" >
 								</div>
 								<div class="col-5 align-self-center">
-									<img src="Bilder/vorspeisen/salatText.jpg" alt="Salat"  width="400" height="400">
+									<img src="Bilder/getraenke/alkoholfreiText.jpg" alt="Alkoholfrei Text"  width="400" height="400">
 								</div>
 							</div>
 							
@@ -197,7 +116,7 @@
 								
 							<!-- Sprungmarke ID für Gericht -->
 							<br>
-							<div class="row" id="suppe">
+							<div class="row" id="alkoholisch">
 							</div>
 							<br>
 							<br>
@@ -205,10 +124,10 @@
 							<!-- Bild mit Unterüberschrift-->
 							<div class="row">
 								<div class="col-5 align-self-start">
-									<img src="Bilder/vorspeisen/suppe.jpg" alt="Suppe" class="img-thumbnail" width="400" height="400">
+									<img src="Bilder/getraenke/alkoholisch.jpg" alt="Alkoholisch" class="img-thumbnail" width="400" height="400">
 								</div>
 								<div class="col-5 ">
-									<img src="Bilder/vorspeisen/suppeText.jpg" alt="Suppe" >
+									<img src="Bilder/getraenke/alkoholischText.jpg" alt="Alkoholisch Text" >
 								</div>
 							</div>
 							
