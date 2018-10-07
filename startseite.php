@@ -15,7 +15,7 @@
 	<body>
 	<!-- Wert des Cookies ausgeben zum Test! -->
 		<?php 
-            echo $_COOKIE["tischNr"];
+          //  echo $_COOKIE["tischNr"];
         ?>
 		
 		<div class="container-fluid">

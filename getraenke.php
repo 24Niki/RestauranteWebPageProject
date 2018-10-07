@@ -65,54 +65,25 @@
 								</div>
 							</div>
 							
-							<!-- Liste der Gerichte -->
-							<div class="container"> <!-- Container 2 -->
-								<br>
-								<ul class="list-group">
-								
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Margherita</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Tomaten und KÃ¤se</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-									
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Tonno</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Thunfisch, Oliven und Zwiebeln</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-									
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Salami</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Salami</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div><!-- Container 2-->
+							<?php
+    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+                                $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholfrei'";
+                                
+                                 foreach ($pdo->query($sql) as $row) : 
+                                     $neue_bestellung = array();
+                                     $cookie = $_COOKIE["tischNr"];
+                                     $neue_bestellung['tischid'] = $cookie;
+                                     $neue_bestellung['speisenid'] = $row['id'];
+                             
+                                     include 'anzeigeDerSpeisen.php';
+                                     
+        							if(isset($_POST['bestellenButton'.$row['id']])){
+            							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
+            							$statement->execute($neue_bestellung);
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            					    }
+        					    endforeach; 
+        					 ?>
 								
 							<!-- Sprungmarke ID fÃ¼r Gericht -->
 							<br>
@@ -131,55 +102,25 @@
 								</div>
 							</div>
 							
-							<!-- Liste der Gerichte -->
-							<div class="container"> <!-- Container 3 -->
-								<br>
-								<ul class="list-group">
-								
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Margherita</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Tomaten und KÃ¤se</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-									
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Tonno</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Thunfisch, Oliven und Zwiebeln</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-									
-									<li class="list-group-item">
-										<div class="row justify-content-start">
-											<h4>Pizza Salami</h4>
-										</div>
-										<div class="row justify-content-start">
-											<div class="col-10">
-												<p>mit Salami</p>
-											</div>
-											<div class="col-2">
-												<button>Bestellen</button>
-											</div>
-										</div>
-									</li>
-									
-								</ul>
-							</div> <!--Container 3 -->
+							<?php
+    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+                                $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholisch'";
+                                
+                                 foreach ($pdo->query($sql) as $row) : 
+                                     $neue_bestellung = array();
+                                     $cookie = $_COOKIE["tischNr"];
+                                     $neue_bestellung['tischid'] = $cookie;
+                                     $neue_bestellung['speisenid'] = $row['id'];
+                             
+                                     include 'anzeigeDerSpeisen.php';
+                                     
+        							if(isset($_POST['bestellenButton'.$row['id']])){
+            							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
+            							$statement->execute($neue_bestellung);
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            					    }
+        					    endforeach; 
+        					 ?>
 							
 						</div><!-- Container 1-->
 					</div> <!-- Col-10 -->

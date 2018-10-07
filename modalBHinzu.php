@@ -9,7 +9,7 @@
 			          <h4 class="modal-title">Die Bestellung wurde hinzugefügt.</h4>
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
 			        </div>
-			        
+			       
 			        <!-- Modal footer -->
 			        <div class="modal-footer">
 			        	<div class="col">
@@ -23,4 +23,5 @@
 			      </div><!-- /Modal Content -->
 			    </div>
 			  </div>
-
+			  
+			 

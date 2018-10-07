@@ -56,7 +56,8 @@
 									<?php
                                     $pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
                                     $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id";
-                                   ?>
+                                    $nr = 0;
+                                    ?>
                                     
                               <!-- Tabelle mit Anzeige der Bestellungen -->
                                     <table class="table">
@@ -69,10 +70,11 @@
 									</thead>
 									
                                     <?php
-                                     foreach ($pdo->query($sql) as $row) : ?>
+                                     foreach ($pdo->query($sql) as $row) :
+                                     $nr+=1;?>
 									<tbody>
 									  <tr>
-										<td><?=$row['id']?></td>
+										<td><?=$nr?></td>
 										<td><?=$row['name']?></td>
 										<td><?=$row['preis']?></td>
 									  </tr>
