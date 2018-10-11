@@ -1,11 +1,12 @@
 	<?php
 
 					if(isset($_POST['abc'])){
-    $cookieWert = $_POST["tischNummer"];
-    setcookie("tischNr",$cookieWert,0);
-  
-					}
+                        $cookieWert = $_POST["tischNummer"];
+                        setcookie("tischNr",$cookieWert,0);
+					}					
+				
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>

@@ -23,7 +23,6 @@
 			<div class="row">
 				<?php 
 				    include 'navbarHorizontal.php';
-				    include 'modalBHinzu.php';
                 ?>	
 			</div><!-- Row-->
 			

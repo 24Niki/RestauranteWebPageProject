@@ -1,12 +1,3 @@
-<?php
-
-
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -87,5 +78,6 @@
 			window.location = "carousel.php";
 		}
 	</script>
+	
 </body>
 </html>
