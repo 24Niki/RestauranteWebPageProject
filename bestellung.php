@@ -42,14 +42,22 @@
 						<div class="container" id="back"> <!-- Container 1 -->
 							<br>
 							
-							<!-- Überschrift der Seite -->
+							<!-- ï¿½berschrift der Seite -->
 							<div class="row justify-content-center">
 							  <img class="img-fluid" src="Bilder/bestellungText.png" alt="Bestellung" style="width:600px;" class="float-center">
 							</div>
 							<div class="row">
 								<div class="container">
+								<!-- Info: auf der Seite z.B. Bestellung
+							eine Verlinkung zum Malprogramm  -->
+							
+							<svg height="100" width="300" xmlns:xlink="http://www.w3.org/1999/xlink">
+									  <a xlink:href="kinderseite.php" target="_blank">
+										<text x="0" y="15" fill="red" transform = "rotate(-10, 150, 30)">Hier geht's zum Kindermalprogramm!</text>
+									  </a>
+									 </svg>  
 								  <br>
-								  <p>Liebe Gäste, <br>
+								  <p>Liebe Gï¿½ste, <br>
 										unten finden Sie Ihre aktuelle Bestellung. Wenn Sie fertig sind, dann klicken Sie auf den Button "bestellen". 
 									</p>
 									
@@ -129,7 +137,7 @@
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 				<div class="container">
 					<div class="navbar-text pull-left">
-						<p>© 2018 </p>
+						<p>ï¿½ 2018 </p>
 					</div>
 					<div class="navbar-text">
 						<a href=#>Impressum</a>
@@ -140,7 +148,7 @@
 				</div>
 			</div>
 			
-		</div> <!-- Übergeordneter Container -->
+		</div> <!-- ï¿½bergeordneter Container -->
 		
 	</body>
 </html>
