@@ -146,9 +146,6 @@
 	  
 			</div><!-- div 1-->
 			
-			<?php 
-		       	include 'modalBHinzu.php';
-			?>
 			
 			<!-- Fixed footer -->
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
