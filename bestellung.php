@@ -1,3 +1,8 @@
+<?php 
+		$cookie = $_COOKIE["tischNr"];
+		echo $cookie;
+?>	
+
 <!DOCTYPE html>
 <html lang="de">
 	<head>
@@ -24,7 +29,6 @@
 			<div class="row">
 				<?php 
 				    include 'navbarHorizontal.php';
-				    include 'modalBHinzu.php';
                 ?>	
 			</div><!-- Row-->
 			
@@ -55,7 +59,7 @@
 									
 									<?php
                                     $pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
-                                    $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id";
+                                    $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id WHERE bestellung.tischid = $cookie";
                                     $nr = 0;
                                     ?>
                                     
@@ -70,7 +74,7 @@
 									</thead>
 									
                                     <?php
-                                     foreach ($pdo->query($sql) as $row) :
+                                     foreach($pdo->query($sql) as $row) :
                                      $nr+=1;?>
 									<tbody>
 									  <tr>
