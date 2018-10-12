@@ -135,7 +135,7 @@
 			role="navigation">
 			<div class="container">
 				<div class="navbar-text pull-left">
-					<p>Â© 2018</p>
+					<p>© 2018</p>
 				</div>
 				<div class="navbar-text pull-right">
 					<a href="#help">Hilfe</a>

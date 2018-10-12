@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 11. Okt 2018 um 20:31
+-- Erstellungszeit: 12. Okt 2018 um 15:26
 -- Server-Version: 10.1.35-MariaDB
 -- PHP-Version: 7.2.9
 
@@ -33,6 +33,30 @@ CREATE TABLE `bestellung` (
   `tischid` int(11) NOT NULL,
   `speisenid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `bestellung`
+--
+
+INSERT INTO `bestellung` (`id`, `tischid`, `speisenid`) VALUES
+(6, 5, 6),
+(7, 5, 7),
+(8, 1, 58),
+(9, 1, 48),
+(10, 1, 66),
+(11, 1, 18),
+(12, 1, 43),
+(13, 2, 7),
+(14, 2, 38),
+(15, 2, 26),
+(16, 2, 49),
+(17, 2, 64),
+(18, 4, 66),
+(19, 1, 66),
+(20, 1, 42),
+(21, 1, 65),
+(22, 1, 44),
+(24, 2, 49);
 
 -- --------------------------------------------------------
 
@@ -89,7 +113,7 @@ INSERT INTO `speisen` (`id`, `kategorie`, `name`, `beschreibung`, `preis`, `zube
 (39, 'kleinerHunger', 'Chicken Nuggets und Pommes frites', 'Kleine Portion', '5.50', 8),
 (40, 'kleinerHunger', 'Mozzarella Sticks', 'Kleine Portion, 5 Stück', '4.00', 8),
 (41, 'kleinerHunger', 'Zwiebelringe mit Knoblauch-Dip', 'Kleine Portion', '2.50', 8),
-(42, 'alkoholisch', 'Hefeweißen', '0,5l', '2.70', 3),
+(42, 'alkoholisch', 'Hefeweizen', '0,5l', '2.70', 3),
 (43, 'alkoholisch', 'Kristallweizen', '0,5l', '2.70', 3),
 (44, 'alkoholisch', 'Radler', '0,5l', '2.70', 3),
 (45, 'alkoholisch', 'Becks Green Lemon', '0,33l', '2.70', 3),
@@ -126,8 +150,19 @@ INSERT INTO `speisen` (`id`, `kategorie`, `name`, `beschreibung`, `preis`, `zube
 
 CREATE TABLE `tische` (
   `id` int(11) NOT NULL,
-  `tischname` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `name` varchar(256) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `tische`
+--
+
+INSERT INTO `tische` (`id`, `name`) VALUES
+(1, 'Tisch1'),
+(2, 'Tisch2'),
+(3, 'Tisch3'),
+(4, 'Tisch4'),
+(5, 'Tisch5');
 
 --
 -- Indizes der exportierten Tabellen
@@ -161,19 +196,13 @@ ALTER TABLE `tische`
 -- AUTO_INCREMENT für Tabelle `bestellung`
 --
 ALTER TABLE `bestellung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT für Tabelle `speisen`
 --
 ALTER TABLE `speisen`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
-
---
--- AUTO_INCREMENT für Tabelle `tische`
---
-ALTER TABLE `tische`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints der exportierten Tabellen
