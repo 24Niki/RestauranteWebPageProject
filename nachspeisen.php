@@ -42,13 +42,13 @@
 						<div class="container"> <!-- Container 1 -->
 							<br>
 							
-							<!-- Überschrift der Seite -->
+							<!-- Ãœberschrift der Seite -->
 							<div class="row justify-content-center">
 							  <img src="Bilder/nachspeisen/nachspeisenText.png" alt="Nachspeisen" style="width:600px;" class="float-center">
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'nachspeisen'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -62,7 +62,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -78,7 +78,7 @@
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 				<div class="container">
 					<div class="navbar-text pull-left">
-						<p>© 2018 </p>
+						<p>Â© 2018 </p>
 					</div>
 					<div class="navbar-text pull-right">
 						<a href="#help">Hilfe</a> 
@@ -86,6 +86,6 @@
 				</div>
 			</div>
 			
-		</div> <!-- Übergeordneter Container -->
+		</div> <!-- Ãœbergeordneter Container -->
 	</body>
 </html>

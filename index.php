@@ -26,7 +26,7 @@
 					
 					<form class="login-form" method="post" action="carousel.php">
 					
-						<!-- Eingabefeld für Tischnummer -->
+						<!-- Eingabefeld fÃ¼r Tischnummer -->
 						<div class="form-group">
 							<input type="text" class="form-control" name="tischNummer" placeholder="Tischnummer" maxlength="50">
 						</div>

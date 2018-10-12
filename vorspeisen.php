@@ -46,19 +46,19 @@
 						<div class="container"> <!-- Container 1 -->
 							<br>
 							
-							<!-- �berschrift der Seite -->
+							<!-- überschrift der Seite -->
 							<div class="row justify-content-center">
 							  <img src="Bilder/vorspeisen/vorspeisenText2.png" alt="Home" style="width:600px;" class="float-center">
 							</div>
 							
-							<!-- Sprungmarke ID für Gericht -->
+							<!-- Sprungmarke ID fÃ¼r Gericht -->
 							<br>
 							<div class="row" id="salat">
 							</div>
 							<br>
 							<br>
 							
-							<!-- Bild mit Unterüberschrift-->
+							<!-- Bild mit UnterÃ¼berschrift-->
 							<div class="row">
 								<div class="col-5 align-self-start">
 									<img src="Bilder/vorspeisen/salat.jpg" alt="Salat" class="img-thumbnail" >
@@ -71,9 +71,9 @@
 							<?php
 
                             /* Verbindung zur Datenbank mittels Klasse PDO (PHP Data Objects)*/
-                            $pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							$pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                             
-                            /* Verbindung aufgebaut -> Anfragen sind m�glich
+                            /* Verbindung aufgebaut -> Anfragen sind möglich
                              // SQL-Befehl: SELECT Spalten FROM Tabelle*/
                             $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'salat'";
                             
@@ -93,7 +93,7 @@
 							 if(isset($_POST['bestellenButton'.$row['id']])){
     							    $statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
     							    $statement->execute($neue_bestellung);
-    							    echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
+    							    echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
     							}
                              
     						endforeach; 
@@ -101,14 +101,14 @@
     						?>
 							
 							
-							<!-- Sprungmarke ID für Gericht -->
+							<!-- Sprungmarke ID fÃ¼r Gericht -->
 							<br>
 							<div class="row" id="suppe">
 							</div>
 							<br>
 							<br>
 							
-							<!-- Bild mit Unterüberschrift-->
+							<!-- Bild mit UnterÃ¼berschrift-->
 							<div class="row">
 								<div class="col-5 align-self-start">
 									<img src="Bilder/vorspeisen/suppe.jpg" alt="Suppe" class="img-thumbnail" width="400" height="400">
@@ -119,7 +119,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							$pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'suppe'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -133,7 +133,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -151,7 +151,7 @@
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 				<div class="container">
 					<div class="navbar-text pull-left">
-						<p>© 2018 </p>
+						<p>Â© 2018 </p>
 					</div>
 					<div class="navbar-text pull-right">
 						<a href="#help">Hilfe</a> 
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 			
-		</div> <!-- Übergeordneter Container -->
+		</div> <!-- Ãœbergeordneter Container -->
 		
 		<!-- Java Script  -->
 		<script type="text/javascript">

@@ -1,4 +1,5 @@
 <?php 
+header("Content-type:text/html; charset=utf-8"); 
 		$cookie = $_COOKIE["tischNr"];
 		echo $cookie;
 ?>	
@@ -46,7 +47,7 @@
 						<div class="container" id="back"> <!-- Container 1 -->
 							<br>
 							
-							<!-- �berschrift der Seite -->
+							<!-- ï¿½berschrift der Seite -->
 							<div class="row justify-content-center">
 							  <img class="img-fluid" src="Bilder/bestellungText.png" alt="Bestellung" style="width:600px;" class="float-center">
 							</div>
@@ -61,13 +62,15 @@
 									  </a>
 									 </svg>  
 								  <br>
-								  <p>Liebe G�ste, <br>
+								  <p>Liebe Gäste, <br>
 										unten finden Sie Ihre aktuelle Bestellung. Wenn Sie fertig sind, dann klicken Sie auf den Button "bestellen". 
 									</p>
 									
 									<?php
-                                    $pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+                                    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
+                                    
                                     $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id WHERE bestellung.tischid = $cookie";
+                                     
                                     $nr = 0;
                                     ?>
                                     
@@ -114,13 +117,13 @@
 								      <div class="modal-content">
 								        <div class="modal-header">
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
-								          <h4 class="modal-title">Ihre Bestellung wurde an die Küche versendet</h4>
+								          <h4 class="modal-title">Ihre Bestellung wurde an die KÃ¼che versendet</h4>
 								        </div>
 								        <div class="modal-body">
-								          <p>Wir wünschen Ihnen einen guten Appetit</p>
+								          <p>Wir wÃ¼nschen Ihnen einen guten Appetit</p>
 								        </div>
 								        <div class="modal-footer">
-								          <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+								          <button type="button" class="btn btn-default" data-dismiss="modal">SchlieÃŸen</button>
 								        </div>
 								      </div>
 								      
@@ -141,7 +144,7 @@
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 				<div class="container">
 					<div class="navbar-text pull-left">
-						<p>� 2018 </p>
+						<p>ï¿½ 2018 </p>
 					</div>
 					<div class="navbar-text">
 						<a href=#>Impressum</a>
@@ -152,7 +155,7 @@
 				</div>
 			</div>
 			
-		</div> <!-- �bergeordneter Container -->
+		</div> <!-- ï¿½bergeordneter Container -->
 		
 	</body>
 </html>

@@ -65,7 +65,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholfrei'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -79,7 +79,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -102,7 +102,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+						    	$pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholisch'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 

@@ -52,7 +52,7 @@
 						<!-- Container 1 -->
 						<br>
 
-						<!-- Überschrift der Seite -->
+						<!-- Ãœberschrift der Seite -->
 						<div class="row justify-content-center">
 							<img class="img-fluid" src="Bilder/willkommenText.png"
 								alt="Startseite" style="width: 600px;" class="float-center">
@@ -92,7 +92,7 @@
 									<br />
 									<button onclick="javascript:clearArea();return false;">Löschen</button>
 
-									<!-- Auswahlmöglichkeit verschiedener Strichstärken. Aktuelle Strichstärke ist 5 -->
+									<!-- AuswahlmÃ¶glichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
 									Strichstärke : <select id="auswahlStrich">
 										<option value="3">3</option>
 										<option value="5" selected="selected">5</option>
@@ -101,7 +101,7 @@
 										<option value="11">11</option>
 									</select> Farbe : <select id="auswahlFarbe">
 
-										<!-- Auswahlmöglichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
+										<!-- AuswahlmÃ¶glichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
 
 										<option value="blue" selected="selected">blau</option>
 										<option value="red">rot</option>
@@ -135,7 +135,7 @@
 			role="navigation">
 			<div class="container">
 				<div class="navbar-text pull-left">
-					<p>© 2018</p>
+					<p>Â© 2018</p>
 				</div>
 				<div class="navbar-text pull-right">
 					<a href="#help">Hilfe</a>
@@ -144,7 +144,7 @@
 		</div>
 
 	</div>
-	<!-- Übergeordneter Container -->
+	<!-- Ãœbergeordneter Container -->
 	<script> 
 	var mousePressed = false;
 	var lastX, lastY;
@@ -171,7 +171,7 @@
 			mousePressed = false;
 		});
 	};
-	/*Funktion zeichnet solange die Maus gedrückt wird */
+	/*Funktion zeichnet solange die Maus gedrÃ¼ckt wird */
 	function Draw(x, y, isDown) {
 		if (isDown) {
 			dw.beginPath();
@@ -185,7 +185,7 @@
 		}
 		lastX = x; lastY = y;
 	};
-	/*Funktion ermöglicht das Löschen */	
+	/*Funktion ermÃ¶glicht das LÃ¶schen */	
 	function clearArea() {
 		dw.setTransform(1, 0, 0, 1, 0, 0);
 		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);

@@ -65,7 +65,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pizza'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -102,7 +102,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pastaPfanne'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -139,7 +139,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pastaOfen'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -176,7 +176,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'fleisch'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -213,7 +213,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'fisch'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -251,7 +251,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'risotto'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -288,7 +288,7 @@
 							</div>
 							
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'kleinerHunger'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 

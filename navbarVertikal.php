@@ -38,13 +38,13 @@
 								<a class="nav-link" href="hauptspeisen.php#risotto" id="navBarTextSmall">Risotto</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="hauptspeisen.php#kleinerHunger" id="navBarTextSmall">Für den kleinen Hunger</a>
+								<a class="nav-link" href="hauptspeisen.php#kleinerHunger" id="navBarTextSmall">FÃ¼r den kleinen Hunger</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link disabled" href="nachspeisen.php" id="navBarText">Dessert</a>
 							</li>					
 							<li class="nav-item">
-								<a class="nav-link disabled" href="getraenke.php" id="navBarText">Getränke</a>
+								<a class="nav-link disabled" href="getraenke.php" id="navBarText">GetrÃ¤nke</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="getraenke.php#alkoholfrei" id="navBarTextSmall">Alkoholfrei</a>
