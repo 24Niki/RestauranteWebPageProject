@@ -1,8 +1,9 @@
-<? php
+
+<?php
 session_start();
 ?>
 
-<? php
+<?php
 $uname = $_POST['uname'];
 $password = $_POST['password'];
 $session_start();
@@ -15,22 +16,21 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
 echo "Login success";
 $SESSION['log'] = 1; 
-header("refresh:2,url=kinderseite.html");
+header("refresh:2,url=bestellung.php"); // Ändern
 
 }
 else{
 echo "incorrect info";
-header("refresh:2;url =kuechelogin.html"); 
+header("refresh:2;url =loginkueche.php"); 
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
 <head>
 <title> Login </title>
 <body>
-<form method = "POST" action = "bestellung.html"> 
+<form method = "POST" action = "bestellung.php">   // Ändern 
 	Enter Username: <input type ="text" name = "uname" > <br><br>
 	Enter Password: <input type ="text" name = "password" > <br>
 	<input type = "submit" value = "login" >
