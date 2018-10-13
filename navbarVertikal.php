@@ -38,21 +38,13 @@
 								<a class="nav-link" href="hauptspeisen.php#risotto" id="navBarTextSmall">Risotto</a>
 							</li>
 							<li class="nav-item">
-<<<<<<< HEAD
-								<a class="nav-link" href="hauptspeisen.php#kleinerHunger" id="navBarTextSmall">F�r den kleinen Hunger</a>
-=======
 								<a class="nav-link" href="hauptspeisen.php#kleinerHunger" id="navBarTextSmall">Für den kleinen Hunger</a>
->>>>>>> f4d26ab6e4663128a42565559fd71703dbda2679
 							</li>
 							<li class="nav-item">
 								<a class="nav-link disabled" href="nachspeisen.php" id="navBarText">Dessert</a>
 							</li>					
 							<li class="nav-item">
-<<<<<<< HEAD
-								<a class="nav-link disabled" href="getraenke.php" id="navBarText">Getr�nke</a>
-=======
 								<a class="nav-link disabled" href="getraenke.php" id="navBarText">Getränke</a>
->>>>>>> f4d26ab6e4663128a42565559fd71703dbda2679
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="getraenke.php#alkoholfrei" id="navBarTextSmall">Alkoholfrei</a>

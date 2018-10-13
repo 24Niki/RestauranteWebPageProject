@@ -50,7 +50,7 @@
 							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
 							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
-                                $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pizza'";
+                                $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'wochengerichte'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
                                      $neue_bestellung = array();
