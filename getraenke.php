@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<title>Getränke</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<link href="index.css" rel="stylesheet">
+		<link href="css/speisen.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -26,18 +26,17 @@
                 ?>	
 			</div><!-- Row-->
 			
-			<!-- Navigationsleiste vertikal-->
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
+				
+				    <!-- Navigationsleiste vertikal-->
 					<div class="col-2">
 				  		<?php 
         				    include 'navbarVertikal.php';
                         ?>
 					</div> <!-- col-2 -->
 				
-				<!-- Page Content-->
-				
-				
+				    <!-- Page Content-->
 					<div class="col-10">
 						<div class="container"> <!-- Container 1 -->
 							<br>
@@ -54,7 +53,7 @@
 							<br>
 							<br>
 							
-							<!-- Bild mit Unterüberschrift-->
+							<!-- Bild der Speisenkategorie mit Unterüberschrift-->
 							<div class="row">
 								<div class="col-5 align-self-start">
 									<img src="Bilder/getraenke/alkoholfrei.jpg" alt="Alkoholfrei" class="img-thumbnail" >
@@ -64,8 +63,13 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen den Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
+							    // Aufbau der Verbindung zur Datenbank
 							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
+							    
+							    // Definition der SQL-Abfrage
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholfrei'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -74,11 +78,17 @@
                                      $neue_bestellung['tischid'] = $cookie;
                                      $neue_bestellung['speisenid'] = $row['id'];
                              
+                                     //Ausgabe der Speisen als Liste
                                      include 'anzeigeDerSpeisen.php';
                                      
+                                     // Falls auf den Button "Bestellen" geklickt wird
+                                     // Neue Bestellung für die ausgewählte Speise wird in die Datenbank eingefügt
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
+            							
+            							// Ausgabe an Nutzer, dass Bestellung hinzugefügt wurde
+            							// Kann nun unter "Meine Bestellungen" gesehen werden
             							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
             					    }
         					    endforeach; 
@@ -101,6 +111,8 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen den Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
 						    	$pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'alkoholisch'";
@@ -116,7 +128,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -130,14 +142,7 @@
 			
 			<!-- Fixed footer -->
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-				<div class="container">
-					<div class="navbar-text pull-left">
-						<p>© 2018 </p>
-					</div>
-					<div class="navbar-text pull-right">
-						<a href="#help">Hilfe</a> 
-					</div>
-				</div>
+				<?php include 'footer.php'?>
 			</div>
 			
 		</div> <!-- Übergeordneter Container -->

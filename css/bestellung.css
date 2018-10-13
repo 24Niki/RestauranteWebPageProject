@@ -1,0 +1,33 @@
+#navBarText{
+    color: #6E6E6E;
+	font-size: 110%;
+}
+
+#navBarTextSmall{
+    color: #848484;
+	font-size: 100%;
+}
+
+#navColor{
+    background-color: #E6E6E6;
+}
+
+img{
+    width:100%;
+    height: 100%;
+}
+
+h2{
+	text-align: center;
+}
+table, td, tr{
+	text-align: left;
+}
+
+button{
+	margin-left: 500px;
+}
+
+
+
+

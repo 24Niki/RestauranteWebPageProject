@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link href="kinderseite.css" rel="stylesheet">
+<link href="css/kinderseite.css" rel="stylesheet">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,35 +18,30 @@
 
 <body onload="Initialize();">
 	<div class="container-fluid">
-
-		<!-- Image on Top of the Web Page -->
-		<div class="row">
-			<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page">
-		</div>
-
-		<!-- Navigationsleiste horizontal-->
-		<div class="row">
-				<?php
-    include 'navbarHorizontal.php';
-    ?>	
-			</div>
-		<!-- Row-->
-
-		<!-- Navigationsleiste vertikal-->
-		<div>
-			<!-- div 1-->
+		
+			<!-- Image on Top of the Web Page -->
 			<div class="row">
-				<!-- div 2-->
-				<div class="col-2">
-				  		<?php
-        include 'navbarVertikal.php';
-        ?>
-					</div>
-				<!-- col-2 -->
-
-				<!-- Page Content-->
-
-
+				<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
+			</div>
+			
+			<!-- Navigationsleiste horizontal-->
+			<div class="row">
+				<?php 
+				    include 'navbarHorizontal.php';
+                ?>	
+			</div><!-- Row-->
+			
+			<div><!-- div 1-->
+				<div class="row"> <!-- div 2-->
+				
+				    <!-- Navigationsleiste vertikal-->
+					<div class="col-2">
+				  		<?php 
+        				    include 'navbarVertikal.php';
+                        ?>
+					</div> <!-- col-2 -->
+				
+				    <!-- Page Content-->
 				<div class="col-10">
 					<div class="container" id="back">
 						<!-- Container 1 -->
