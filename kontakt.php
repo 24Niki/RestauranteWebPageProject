@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="de">
@@ -8,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		
+		<link href="css/kontakt.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -20,7 +18,7 @@
 		
 			<!-- Image on Top of the Web Page -->
 			<div class="row">
-				<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
+				<img id="img" class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
 			</div>
 			
 			<!-- Navigationsleiste horizontal-->
@@ -42,8 +40,27 @@
 				<!-- Page Content-->
 				<div class="col-10" >
 						<div class="container" id="back"> <!-- Container 1 -->
-						
-							<img src="newfile.php">
+							<div class="row"><p></p></div>
+							<div class="row"><p></p></div>
+							<div class="row">
+								<div class="col-5"></div>
+								<p></p>
+								<h3>Kontakt</h3>
+								<br><br>
+							</div>
+							<div class="row"><p></p></div>
+							<div class="row">
+								<div class="col-3"></div>
+								<div class="col-6">
+								
+									<!-- Aufruf der vom Server generierten Grafik -->
+    								<img src="visitenkarte.php">
+    							</div>
+							</div>
+							<div class="row"><p></p></div>
+							<div class="row">
+    								<img src="Bilder/restaurantvA.jpg">
+							</div>
 							
 						</div><!-- Container 1-->
 					</div> <!-- Col-10 -->
