@@ -49,7 +49,7 @@
 
 
 				<div class="col-10">
-					<div class="container" id="back">
+					<div class="container">
 						<!-- Container 1 -->
 						<br>
 
@@ -61,18 +61,7 @@
 						<div class="row">
 							<div class="container">
 								<div>
-									<!-- SVG -->
-
-									<svg height="100" width="300">
-							<text x="0" y="15" fill="red" transform="rotate(-30 150, 30)"> Jetzt Neu bei uns! </text>
-							</svg>
-								</div>
-								<!-- Info: auf der Seite z.B. Bestellung
-							eine Verlinkung zum Malprogramm  -->
-
-
-
-
+									
 								<h2>Für unsere kleinen Gäste</h2>
 								<br>
 								<h3>

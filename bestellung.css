@@ -24,9 +24,6 @@
 	
 }
 
-#back{
-	background-image: URL("Bilder/hintergrund.jpg");
-}
 
 #pStart{
 	font: arial;
@@ -48,3 +45,9 @@ button{
 	margin-left: 500px;
 }
 
+#buttoninfo{
+	margin-right: 150px auto;
+	background-color: yellow;
+}
+
+}
