@@ -1,56 +1,49 @@
-<?php
-	$username = $_POST['user'];
-	$password = $_POST['pass'];
-	
-	$username = stripcslashes($username)
-	$password = stripcslashes($password);
-	$username = mysql_real_escape_string($username);
-	$password = mysql_real_escape_string($password);
-	
-	mysql_connect("localhost", "root", "");
-	mysql_select_db("restaurantdb");
-	
-	$result = mysql_query("select * from users where username = '$username' and password = '$password'") 
-			or die("Failed to query database".mysql_error());
-			
-	$row = mysql_fetch_array($result);
-	if($row['username'] == $username && $row['password'] == $password){
-		echo "Login success!!! Welcome " .$row['username'];
-		}
-		else{
-		echo "Failed to Login!";
-		}
-		
+<? php
+session_start();
 ?>
-	
+
+<? php
+$uname = $_POST['uname'];
+$password = $_POST['password'];
+$session_start();
+
+
+$con=mysqli_connect("localhost", "root", "", "restaurantdb");
+$restult=mysqli_query($con, "SELECT * FROM `login_info` WHERE `uname`= '$uname' && `password` = '$password'");
+$count = mysqli_num_rows($result);
+
+if($count == 1) {
+echo "Login success";
+$SESSION['log'] = 1; 
+header("refresh:2,url=kinderseite.html");
+
+}
+else{
+echo "incorrect info";
+header("refresh:2;url =kuechelogin.html"); 
+}
+?>
+
+
 <!DOCTYPE html>
-
-
-
-<html lang="de">
+<html>
 <head>
-  <title>Login Page</title>
-  <link rel = "stylesheet" type = "text/css" href ="style.css" >
-  <link href="css/loginkueche.css" rel="stylesheet">
-  </head>
-  
-  <body>
-	<div id = "frm">
-		<form action ="bestellung.php" method = "POST">
-		<p> 
-		<label> Username: </label>
-		<input type = "text" id = "user" name  = "user" />
-		</p>
+<title> Login </title>
+<body>
+<form method = "POST" action = "bestellung.html"> 
+	Enter Username: <input type ="text" name = "uname" > <br><br>
+	Enter Password: <input type ="text" name = "password" > <br>
+	<input type = "submit" value = "login" >
+	
+</form>
 
-		<p> 
-		<label> Password: </label>
-		<input type = "password" id = "pass" name ="pass" />
-		</p>
-		
-		<p> 
-		<input type = "submit" id = "btn" value = "Login" />
-		</p>
-		</form>
-	</div>
-  </body>
- </html>
+	
+</body>
+
+</html>
+
+<? php
+session_destroy();
+
+
+?>
