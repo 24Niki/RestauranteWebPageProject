@@ -140,7 +140,7 @@
 											</div>
 											<div class="modal-footer">
 
-												<form method='GET' action='/restaurant/index.jsp'>
+												<form method='GET' action='/restaurant_java/kontakt.jsp'>
 													<!-- <form method = 'GET' action = 'restaurant/index.jsp'> -->
 													<!--    <form method = 'GET' action = './restaurant/index.jsp'> -->
 													<input type='submit' value='Zur Bewertung'>
