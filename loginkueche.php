@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <?php
-$uname = $_POST['uname'];
+ $uname = $_POST['uname'];
 $password = $_POST['password'];
 $session_start();
 
@@ -16,7 +16,7 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
 echo "Login success";
 $SESSION['log'] = 1; 
-header("refresh:2,url=bestellung.php"); // Ändern
+header("refresh:2;url=bestellung.php"); // Ändern
 
 }
 else{
@@ -30,7 +30,8 @@ header("refresh:2;url =loginkueche.php");
 <head>
 <title> Login </title>
 <body>
-<form method = "POST" action = "bestellung.php">   // Ändern 
+
+<form method = "POST" action = "/restaurant_java/alleBestellungen.jsp">   // Ändern 
 	Enter Username: <input type ="text" name = "uname" > <br><br>
 	Enter Password: <input type ="text" name = "password" > <br>
 	<input type = "submit" value = "login" >

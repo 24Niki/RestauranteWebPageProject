@@ -14,38 +14,42 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-		type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+	type="text/javascript"></script>
 <script type="text/javascript" src="JsCode.js"></script>
 </head>
 
 <body onload="Initialize();">
 	<div class="container-fluid">
-		
-			<!-- Image on Top of the Web Page -->
-			<div class="row">
-				<img id="img" class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
+
+		<!-- Image on Top of the Web Page -->
+		<div class="row">
+			<img id="img" class="img-fluid" src="Bilder/pizza23.jpg"
+				alt="Pizza Top Page">
+		</div>
+
+		<!-- Navigationsleiste horizontal-->
+		<div class="row">
+				<?php
+    include 'navbarHorizontal.php';
+    ?>	
 			</div>
-			
-			<!-- Navigationsleiste horizontal-->
+		<!-- Row-->
+
+		<div>
+			<!-- div 1-->
 			<div class="row">
-				<?php 
-				    include 'navbarHorizontal.php';
-                ?>	
-			</div><!-- Row-->
-			
-			<div><!-- div 1-->
-				<div class="row"> <!-- div 2-->
-				
-				    <!-- Navigationsleiste vertikal-->
-					<div class="col-2">
-				  		<?php 
-        				    include 'navbarVertikal.php';
-                        ?>
-					</div> <!-- col-2 -->
-				
-				    <!-- Page Content-->
+				<!-- div 2-->
+
+				<!-- Navigationsleiste vertikal-->
+				<div class="col-2">
+				  		<?php
+        include 'navbarVertikal.php';
+        ?>
+					</div>
+				<!-- col-2 -->
+
+				<!-- Page Content-->
 				<div class="col-10">
 					<div class="container">
 						<!-- Container 1 -->
@@ -59,63 +63,62 @@
 						<div class="row">
 							<div class="container">
 								<div>
-									
-								<h2>Für unsere kleinen Gäste</h2>
-								<br>
-								<h3>
-									Gerne könnt ihr hier im Malprogramm euch kreativ austoben. Ihr
-									habt die Wahl zwischen unterschiedlichen Farben und
-									Strichstärken.
-									<p>Viel Spaß!</p>
-								</h3>
 
-								
-								<div align="center">
-									<canvas id="myCanvas" width="500" height="200"
-										style="border: 2px solid black"></canvas>
-									<br />
-									<br />
-									<button onclick="javascript:clearArea();return false;">Löschen</button>
+									<h2>Für unsere kleinen Gäste</h2>
+									<br>
+									<h3>
+										Gerne könnt ihr hier im Malprogramm euch kreativ austoben. Ihr
+										habt die Wahl zwischen unterschiedlichen Farben und
+										Strichstärken.
+										<p>Viel Spaß!</p>
+									</h3>
 
-									<!-- AuswahlmÃ¶glichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
-									Strichstärke : <select id="auswahlStrich">
-										<option value="3">3</option>
-										<option value="5" selected="selected">5</option>
-										<option value="7">7</option>
-										<option value="9">9</option>
-										<option value="11">11</option>
-									</select> Farbe : <select id="auswahlFarbe">
 
-										<!-- AuswahlmÃ¶glichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
+									<div align="center">
+										<canvas id="myCanvas" width="500" height="200"
+											style="border: 2px solid black"></canvas>
+										<br /> <br />
+										<button onclick="javascript:clearArea();return false;">Löschen</button>
 
-										<option value="blue" selected="selected">blau</option>
-										<option value="red">rot</option>
-										<option value="green">grün</option>
-										<option value="yellow">gelb</option>
-										<option value="gray">grau</option>
-										<option value="black">schwarz</option>
-									</select>
+										<!-- AuswahlmÃ¶glichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
+										Strichstärke : <select id="auswahlStrich">
+											<option value="3">3</option>
+											<option value="5" selected="selected">5</option>
+											<option value="7">7</option>
+											<option value="9">9</option>
+											<option value="11">11</option>
+										</select> Farbe : <select id="auswahlFarbe">
+
+											<!-- AuswahlmÃ¶glichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
+
+											<option value="blue" selected="selected">blau</option>
+											<option value="red">rot</option>
+											<option value="green">grün</option>
+											<option value="yellow">gelb</option>
+											<option value="gray">grau</option>
+											<option value="black">schwarz</option>
+										</select>
+									</div>
+
+
 								</div>
-
-
 							</div>
+
+							<br> <br> <br>
+
+
 						</div>
-
-						<br> <br> <br>
-
-
+						<!-- Container 1-->
 					</div>
-					<!-- Container 1-->
+					<!-- Col-10 -->
+
 				</div>
-				<!-- Col-10 -->
+				<!-- div 2 (Row)-->
 
 			</div>
-			<!-- div 2 (Row)-->
+			<!-- div 1-->
 
-		</div>
-		<!-- div 1-->
 
-		
 	<script> 
 	var mousePressed = false;
 	var lastX, lastY;
@@ -162,10 +165,12 @@
 		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);
 	};
 </script>
-    <!-- Fixed footer -->
-	<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+			<!-- Fixed footer -->
+			<div class="navbar navbar-inverse navbar-fixed-bottom"
+				role="navigation">
 		<?php include 'footer.php'?>
 	</div>
-	</div>
+		</div>
+
 </body>
 </html>
