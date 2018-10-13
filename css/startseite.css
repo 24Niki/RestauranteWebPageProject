@@ -1,14 +1,3 @@
-.wrapper {
-    display: flex;
-    width: 140%;
-}
-
-#wrapper, img{
-    width:100%;
-    height: 100%;
-}
-
-
 #navBarText{
     color: #6E6E6E;
 	font-size: 110%;
@@ -21,23 +10,24 @@
 
 #navColor{
     background-color: #E6E6E6;
-	
-}
-
-#back{
-	background-image: URL("Bilder/hintergrund.jpg");
 }
 
 #pStart{
 	font: arial;
-	
 	color: black;
 	font-size: 130%;
 	font-family: fantasy; 
 	text-align: center;
 }
 
+img{
+    width:100%;
+    height: 100%;
+}
 
+#back{
+	background-image: URL("../Bilder/hintergrund.jpg");
+}
 
 
 

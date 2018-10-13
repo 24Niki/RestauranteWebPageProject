@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<link href="index.css" rel="stylesheet">
+		<link href="css/speisen.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -23,22 +23,19 @@
 			<div class="row">
 				<?php 
 				    include 'navbarHorizontal.php';
-				    include 'modalBHinzu.php';
                 ?>	
 			</div><!-- Row-->
 			
-			<!-- Navigationsleiste vertikal-->
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
+					<!-- Navigationsleiste vertikal-->
 					<div class="col-2">
 				  		<?php 
         				    include 'navbarVertikal.php';
                         ?>
 					</div> <!-- col-2 -->
 				
-				<!-- Page Content-->
-				
-				
+					<!-- Page Content-->
 					<div class="col-10">
 						<div class="container"> <!-- Container 1 -->
 							<br>
@@ -65,8 +62,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pizza'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -80,7 +79,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -102,8 +101,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pastaPfanne'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -117,7 +118,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -139,8 +140,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'pastaOfen'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -154,7 +157,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -176,8 +179,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'fleisch'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -191,7 +196,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -213,8 +218,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'fisch'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -228,7 +235,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -251,8 +258,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'risotto'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -266,7 +275,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
@@ -288,8 +297,10 @@
 								</div>
 							</div>
 							
+							<!-- Anzeige aller Speisen der Kategorie -->
+							<!-- Speisen werden aus der Datenbank geholt und als Liste angezeigt -->
 							<?php
-    							$pdo = new PDO('mysql:host=localhost;dbname=restaurantdb', 'root', '');
+							    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
                                 $sql = "SELECT id, name, kategorie, beschreibung, preis FROM speisen WHERE kategorie = 'kleinerHunger'";
                                 
                                  foreach ($pdo->query($sql) as $row) : 
@@ -303,12 +314,10 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefÃ¼gt!")</script>';
             					    }
         					    endforeach; 
         					 ?>
-							
-				
 							
 						</div><!-- Container 1-->
 					</div> <!-- Col-10 -->
@@ -317,50 +326,10 @@
 	  
 			</div><!-- div 1-->
 			
-			<!-- Modal Bestellbestätigung-->
-			  <div class="modal" id="modalBHinzu">
-			    <div class="modal-dialog">
-			      <div class="modal-content">
-			      
-			        <!-- Modal Header -->
-			        <div class="modal-header">
-			          <h4 class="modal-title">Die Bestellung wurde hinzugefügt.</h4>
-			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        </div>
-			        
-			        <!-- Modal footer -->
-			        <div class="modal-footer">
-			        	<div class="col">
-			        		<button type="button" class="btn" data-dismiss="modal">Weitere Speisen hinzufügen</button>
-			        	</div>
-			        	<div class="col">
-			        		<button type="button" class="btn" data-dismiss="modal" onClick="toBestellungen()">Zu meinen Bestellungen</button>
-			        	</div>
-			        </div> <!-- /Modal footer -->
-			        
-			      </div><!-- /Modal Content -->
-			    </div>
-			  </div>
-			
 			<!-- Fixed footer -->
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-				<div class="container">
-					<div class="navbar-text pull-left">
-						<p>Â© 2018 </p>
-					</div>
-					<div class="navbar-text pull-right">
-						<a href="#help">Hilfe</a> 
-					</div>
-				</div>
+				<?php include 'footer.php'?>
 			</div>
-			
-			<script type="text/javascript">
-		
-			// Weiterleitung zur Bestellungen-Seite
-			function toBestellungen() {
-				window.location = "bestellung.php";
-			}
-		</script>
 			
 		</div> <!-- Ãœbergeordneter Container -->
 	</body>

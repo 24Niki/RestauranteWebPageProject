@@ -1,17 +1,21 @@
+
+
 <!DOCTYPE html>
+
 <html lang="de">
 	<head>
 		<title>Startseite</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<link href="css/startseite.css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
+	
 		<div class="container-fluid">
 		
 			<!-- Image on Top of the Web Page -->
@@ -26,37 +30,20 @@
                 ?>	
 			</div><!-- Row-->
 			
+			<!-- Navigationsleiste vertikal-->
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
-				
-					<!-- Navigationsleiste vertikal-->
 					<div class="col-2">
 				  		<?php 
         				    include 'navbarVertikal.php';
                         ?>
 					</div> <!-- col-2 -->
 				
-				    <!-- Page Content-->
-					<div class="col-10" >
+				<!-- Page Content-->
+				<div class="col-10" >
 						<div class="container" id="back"> <!-- Container 1 -->
-							<br>
-							
-							<!-- Überschrift der Seite -->
-							<div class="row justify-content-center">
-							  <img class="img-fluid" src="Bilder/willkommenText.png" alt="Startseite" style="width:600px;" class="float-center">
-							</div>
-							<div class="row">
-								<p id="pStart"> Frisch schmeckt's am besten! Daher wird bei uns jede Portion Pasta einzeln frisch zubereitet.
-									Unsere Pizzen bereiten wir mit hausgemachter Tomatensauce und nur mit echten Mozzarella zu. 
-									Und durch den Holzofen erhalten unsere Pizzen den unvergleichbaren Geschmack - so muss Pizza schmecken!
-								</p>
-							</div>
-							<br>
-							<br>
-							<br>
-							<div class="row">
-								<img src="Bilder/gedecktertischzwei.jpg" alt="Tisch">
-							</div>
+						
+							<img src="newfile.php">
 							
 						</div><!-- Container 1-->
 					</div> <!-- Col-10 -->

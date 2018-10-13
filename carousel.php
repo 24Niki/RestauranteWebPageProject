@@ -1,18 +1,20 @@
-	<?php
-
-					if(isset($_POST['abc'])){
-    $cookieWert = $_POST["tischNummer"];
-    setcookie("tischNr",$cookieWert,0);
-  
-					}
+<?php
+// Sobald auf der index.php Seite eine Tischnummer eingegeben wurde und auf den Submit-Button gedrückt wurde,
+// wird der Nutzer auf carousel.php weitergeleitet.
+// Es wird ein Cookie erstellt, der die Tischnummer speichert
+if(isset($_POST['loginTischNr'])){
+   $cookieWert = $_POST["tischNummer"];
+   setcookie("tischNr",$cookieWert,0);
+}									
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <title>Willkommen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link href="carousel.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

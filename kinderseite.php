@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link href="kinderseite.css" rel="stylesheet">
+<link href="css/kinderseite.css" rel="stylesheet">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,42 +18,36 @@
 
 <body onload="Initialize();">
 	<div class="container-fluid">
-
-		<!-- Image on Top of the Web Page -->
-		<div class="row">
-			<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page">
-		</div>
-
-		<!-- Navigationsleiste horizontal-->
-		<div class="row">
-				<?php
-    include 'navbarHorizontal.php';
-    include 'modalBHinzu.php';
-    ?>	
-			</div>
-		<!-- Row-->
-
-		<!-- Navigationsleiste vertikal-->
-		<div>
-			<!-- div 1-->
+		
+			<!-- Image on Top of the Web Page -->
 			<div class="row">
-				<!-- div 2-->
-				<div class="col-2">
-				  		<?php
-        include 'navbarVertikal.php';
-        ?>
-					</div>
-				<!-- col-2 -->
-
-				<!-- Page Content-->
-
-
+				<img class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
+			</div>
+			
+			<!-- Navigationsleiste horizontal-->
+			<div class="row">
+				<?php 
+				    include 'navbarHorizontal.php';
+                ?>	
+			</div><!-- Row-->
+			
+			<div><!-- div 1-->
+				<div class="row"> <!-- div 2-->
+				
+				    <!-- Navigationsleiste vertikal-->
+					<div class="col-2">
+				  		<?php 
+        				    include 'navbarVertikal.php';
+                        ?>
+					</div> <!-- col-2 -->
+				
+				    <!-- Page Content-->
 				<div class="col-10">
 					<div class="container">
 						<!-- Container 1 -->
 						<br>
 
-						<!-- Überschrift der Seite -->
+						<!-- Ãœberschrift der Seite -->
 						<div class="row justify-content-center">
 							<img class="img-fluid" src="Bilder/willkommenText.png"
 								alt="Startseite" style="width: 600px;" class="float-center">
@@ -82,7 +76,7 @@
 									<br />
 									<button onclick="javascript:clearArea();return false;">Löschen</button>
 
-									<!-- Auswahlmöglichkeit verschiedener Strichstärken. Aktuelle Strichstärke ist 5 -->
+									<!-- AuswahlmÃ¶glichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
 									Strichstärke : <select id="auswahlStrich">
 										<option value="3">3</option>
 										<option value="5" selected="selected">5</option>
@@ -91,7 +85,7 @@
 										<option value="11">11</option>
 									</select> Farbe : <select id="auswahlFarbe">
 
-										<!-- Auswahlmöglichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
+										<!-- AuswahlmÃ¶glichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
 
 										<option value="blue" selected="selected">blau</option>
 										<option value="red">rot</option>
@@ -134,7 +128,7 @@
 		</div>
 
 	</div>
-	<!-- Übergeordneter Container -->
+	<!-- Ãœbergeordneter Container -->
 	<script> 
 	var mousePressed = false;
 	var lastX, lastY;
@@ -161,7 +155,7 @@
 			mousePressed = false;
 		});
 	};
-	/*Funktion zeichnet solange die Maus gedrückt wird */
+	/*Funktion zeichnet solange die Maus gedrÃ¼ckt wird */
 	function Draw(x, y, isDown) {
 		if (isDown) {
 			dw.beginPath();
@@ -175,7 +169,7 @@
 		}
 		lastX = x; lastY = y;
 	};
-	/*Funktion ermöglicht das Löschen */	
+	/*Funktion ermÃ¶glicht das LÃ¶schen */	
 	function clearArea() {
 		dw.setTransform(1, 0, 0, 1, 0, 0);
 		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);

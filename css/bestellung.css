@@ -1,14 +1,3 @@
-.wrapper {
-    display: flex;
-    width: 140%;
-}
-
-#wrapper, img{
-    width:100%;
-    height: 100%;
-}
-
-
 #navBarText{
     color: #6E6E6E;
 	font-size: 110%;
@@ -21,9 +10,9 @@
 
 #navColor{
     background-color: #E6E6E6;
-	
 }
 
+<<<<<<< HEAD:bestellung.css
 
 #pStart{
 	font: arial;
@@ -32,6 +21,11 @@
 	font-size: 130%;
 	font-family: fantasy; 
 	text-align: center;
+=======
+img{
+    width:100%;
+    height: 100%;
+>>>>>>> f4d26ab6e4663128a42565559fd71703dbda2679:css/bestellung.css
 }
 
 h2{
@@ -45,9 +39,15 @@ button{
 	margin-left: 500px;
 }
 
+<<<<<<< HEAD:bestellung.css
 #buttoninfo{
 	margin-right: 150px auto;
 	background-color: yellow;
 }
 
 }
+=======
+
+
+
+>>>>>>> f4d26ab6e4663128a42565559fd71703dbda2679:css/bestellung.css
