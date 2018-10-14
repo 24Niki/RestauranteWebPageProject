@@ -1,50 +1,53 @@
-
 <?php
-session_start();
-?>
+$username = $_POST['user'];
+$password = $_POST['pass'];
 
-<?php
- $uname = $_POST['uname'];
-$password = $_POST['password'];
-$session_start();
+$username = stripcslashes($username);
+$password = stripcslashes($password);
+$username = mysql_real_escape_string($username);
+$password = mysql_real_escape_string($password);
 
+mysql_connect("localhost", "root", "");
+mysql_select_db("restaurantdb");
 
-$con=mysqli_connect("localhost", "root", "", "restaurantdb");
-$restult=mysqli_query($con, "SELECT * FROM `login_info` WHERE `uname`= '$uname' && `password` = '$password'");
-$count = mysqli_num_rows($result);
+$result = mysql_query("select * from users where username = '&username' and password = '$password'")
+or die("Failed to query database".mysql_error());
 
-if($count == 1) {
-echo "Login success";
-$SESSION['log'] = 1; 
-header("refresh:2;url=bestellung.php"); // Ändern
-
+$row = mysql_fetch_array($result);
+if($row['username'] == $username && $row['password'] == $password){
+    echo "Login success!!! Welcome " .$row['username'];
 }
 else{
-echo "incorrect info";
-header("refresh:2;url =loginkueche.php"); 
+    echo "Failed to Login!";
 }
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<title> Login </title>
+<title>Login Seite</title>
+<link rel="stylesheet" type="text/css" href="loginkueche.css">
+</head>
+
 <body>
+	<div id="frm">
+		<form action="/restaurant/tischBestellungen.jsp" method="POST">
 
-<form method = "POST" action = "/restaurant_java/alleBestellungen.jsp">   // Ändern 
-	Enter Username: <input type ="text" name = "uname" > <br><br>
-	Enter Password: <input type ="text" name = "password" > <br>
-	<input type = "submit" value = "login" >
-	
-</form>
+			<p>
+				<label>Username:</label> <input type="text" id="user" name="user" />
+			</p>
+			<p>
+				<label>Password:</label> <input type="text" id="pass" name="pass" />
+			</p>
+			<p>
+				<input type="submit" id="btn" name="Login" />
+			</p>
 
-	
+		</form>
+	</div>
+
 </body>
 
 </html>
 
-<? php
-session_destroy();
-
-
-?>

@@ -4,6 +4,7 @@ header("Content-type:text/html; charset=utf-8");
 // Wird benötigt, um die SQL-Abfrage für den gespeicherten Tisch auszuführen
 $cookie = $_COOKIE["tischNr"];
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
