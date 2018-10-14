@@ -31,10 +31,10 @@
 						</div>
 						
 						<div class="form-check" align="right">
-							<INPUT TYPE="submit" value="Starten" onClick="tischnrAbsenden()" name="loginTischNr"></FORM>
+							<input type="submit" value="Starten" onClick="tischnrAbsenden()" name="loginTischNr"></form>
 						</div>
 						
-					</form>	
+					<form>	
 				
 					
 					

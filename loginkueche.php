@@ -51,3 +51,11 @@ else{
 
 </html>
 
+<<<<<<< HEAD
+=======
+<?php
+session_destroy();
+
+
+?>
+>>>>>>> 5e6d2e60b2532db11124e31dd7f1b564a2a0b895

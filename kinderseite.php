@@ -24,30 +24,26 @@
 
 		<!-- Image on Top of the Web Page -->
 		<div class="row">
-			<img id="img" class="img-fluid" src="Bilder/pizza23.jpg"
+			<img  class="img-fluid" src="Bilder/pizza23.jpg"
 				alt="Pizza Top Page">
 		</div>
 
 		<!-- Navigationsleiste horizontal-->
 		<div class="row">
 				<?php
-    include 'navbarHorizontal.php';
-    ?>	
-			</div>
-		<!-- Row-->
+                include 'navbarHorizontal.php';
+                ?>	
+        </div><!-- Row-->
 
-		<div>
-			<!-- div 1-->
-			<div class="row">
-				<!-- div 2-->
+		<div><!-- div 1-->
+			<div class="row"><!-- div 2-->
 
 				<!-- Navigationsleiste vertikal-->
 				<div class="col-2">
 				  		<?php
-        include 'navbarVertikal.php';
-        ?>
-					</div>
-				<!-- col-2 -->
+                        include 'navbarVertikal.php';
+                        ?>
+				</div><!-- col-2 -->
 
 				<!-- Page Content-->
 				<div class="col-10">
@@ -117,8 +113,14 @@
 
 			</div>
 			<!-- div 1-->
+			
+			<!-- Fixed footer -->
+			<div class="navbar navbar-inverse navbar-fixed-bottom"
+				role="navigation">
+		<?php include 'footer.php'?>
+	</div>
 
-
+</div>
 	<script> 
 	var mousePressed = false;
 	var lastX, lastY;
@@ -165,12 +167,8 @@
 		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);
 	};
 </script>
-			<!-- Fixed footer -->
-			<div class="navbar navbar-inverse navbar-fixed-bottom"
-				role="navigation">
-		<?php include 'footer.php'?>
-	</div>
-		</div>
+			
+		
 
 </body>
 </html>
