@@ -24,7 +24,7 @@
 				<?php 
 				    include 'navbarHorizontal.php';
                 ?>	
-			</div><!-- Row-->
+			</div><!-- End Row-->
 			
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
@@ -34,7 +34,7 @@
 				  		<?php 
         				    include 'navbarVertikal.php';
                         ?>
-					</div> <!-- col-2 -->
+					</div> <!-- End col-2 -->
 				
 				    <!-- Page Content-->
 					<div class="col-10">
@@ -128,7 +128,7 @@
         							if(isset($_POST['bestellenButton'.$row['id']])){
             							$statement = $pdo->prepare("INSERT INTO bestellung (tischid, speisenid) VALUES (:tischid, :speisenid)");
             							$statement->execute($neue_bestellung);
-            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugef�gt!")</script>';
+            							echo '<script type="text/javascript">alert("Bestellung wurde hinzugefügt!")</script>';
             					    }
         					    endforeach; 
         					 ?>

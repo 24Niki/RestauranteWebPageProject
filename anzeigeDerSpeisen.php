@@ -1,5 +1,4 @@
-
- <!-- Liste aller Gerichte -->
+<!-- Liste aller Gerichte -->
 <div class="container"> <!-- Container 2 -->
      <br>
      <ul class="list-group">

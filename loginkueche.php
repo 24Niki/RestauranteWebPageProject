@@ -43,7 +43,7 @@ header("refresh:2;url =loginkueche.php");
 
 </html>
 
-<? php
+<?php
 session_destroy();
 
 

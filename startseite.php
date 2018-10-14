@@ -24,7 +24,7 @@
 				<?php 
 				    include 'navbarHorizontal.php';
                 ?>	
-			</div><!-- Row-->
+			</div><!-- End Row-->
 			
 			<div><!-- div 1-->
 				<div class="row"> <!-- div 2-->
@@ -67,7 +67,15 @@
 			
 			<!-- Fixed footer -->
 			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-				<?php include 'footer.php'?>
+				<!-- Footer -->
+                <div class="container">
+                    <div class="navbar-text pull-left">
+                        <p>© 2018 </p>
+                    </div>
+                    <div class="navbar-text pull-right">
+                        <a href="loginkueche.php">Admin</a>
+                    </div>
+                </div>
 			</div>
 			
 		</div> <!-- Übergeordneter Container -->
