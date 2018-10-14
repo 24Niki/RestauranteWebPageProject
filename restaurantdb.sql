@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Okt 2018 um 15:26
+-- Erstellungszeit: 14. Okt 2018 um 18:19
 -- Server-Version: 10.1.35-MariaDB
 -- PHP-Version: 7.2.9
 
@@ -33,30 +33,6 @@ CREATE TABLE `bestellung` (
   `tischid` int(11) NOT NULL,
   `speisenid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Daten für Tabelle `bestellung`
---
-
-INSERT INTO `bestellung` (`id`, `tischid`, `speisenid`) VALUES
-(6, 5, 6),
-(7, 5, 7),
-(8, 1, 58),
-(9, 1, 48),
-(10, 1, 66),
-(11, 1, 18),
-(12, 1, 43),
-(13, 2, 7),
-(14, 2, 38),
-(15, 2, 26),
-(16, 2, 49),
-(17, 2, 64),
-(18, 4, 66),
-(19, 1, 66),
-(20, 1, 42),
-(21, 1, 65),
-(22, 1, 44),
-(24, 2, 49);
 
 -- --------------------------------------------------------
 
@@ -196,7 +172,7 @@ ALTER TABLE `tische`
 -- AUTO_INCREMENT für Tabelle `bestellung`
 --
 ALTER TABLE `bestellung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT für Tabelle `speisen`
