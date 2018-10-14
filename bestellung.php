@@ -25,34 +25,29 @@ $cookie = $_COOKIE["tischNr"];
 
 <body>
 	<div class="container-fluid">
-
-		<!-- Image on Top of the Web Page -->
-		<div class="row">
-			<img id="img" class="img-fluid" src="Bilder/pizza23.jpg"
-				alt="Pizza Top Page">
-		</div>
-		<div class="row">
-				<?php
-    include 'navbarHorizontal.php';
-    ?>	
-			</div>
-		<!-- Row-->
-
-		<div>
-			<!-- div 1-->
+		
+			<!-- Image on Top of the Web Page -->
 			<div class="row">
-				<!-- div 2-->
-
-				<!-- Navigationsleiste vertikal-->
-				<div class="col-2">
-				  		<?php
-        include 'navbarVertikal.php';
-        ?>
-					</div>
-				<!-- col-2 -->
-
-
-
+				<img id="img" class="img-fluid" src="Bilder/pizza23.jpg" alt="Pizza Top Page" > 
+			</div>
+			
+			<!-- Navigationsleiste horizontal-->
+			<div class="row">
+				<?php 
+				    include 'navbarHorizontal.php';
+                ?>	
+			</div><!-- Row-->
+			
+			<div><!-- div 1-->
+				<div class="row"> <!-- div 2-->
+				
+					<!-- Navigationsleiste vertikal-->
+					<div class="col-2">
+				  		<?php 
+        				    include 'navbarVertikal.php';
+                        ?>
+					</div> <!-- col-2 -->
+				
 				<!-- Page Content-->
 				<div class="col-10">
 					<div class="container" id="back">
@@ -91,18 +86,14 @@ $cookie = $_COOKIE["tischNr"];
 									"bestellen".
 								</p>
 
-						
-
-								
-									
 									
 									<?php
-        $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
-        $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id WHERE bestellung.tischid = $cookie";
-        $nr = 0;
-        ?>
-                              
-									
+                                    $pdo = new PDO('mysql:host=localhost;charset=utf8; dbname=restaurantdb', 'root', '');
+                                    $sql = "SELECT bestellung.id, speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid=speisen.id WHERE bestellung.tischid = $cookie";
+                                    $nr = 0;
+                                    ?>
+                                                          
+                            									
                              		<!-- Tabelle mit Anzeige der Bestellungen -->
 								<table class="table">
 									<thead>
@@ -118,7 +109,6 @@ $cookie = $_COOKIE["tischNr"];
                                         foreach ($pdo->query($sql) as $row) :
                                             $nr += 1;
                                             ?>
-                                         
     									<tbody>
 										<tr>
 											<td><?=$nr?></td>
@@ -127,9 +117,8 @@ $cookie = $_COOKIE["tischNr"];
 										</tr>
 									</tbody>
     									
-										<?php endforeach; ?>
-									
-									  </table>
+									<?php endforeach; ?>
+								</table>
 
 							</div>
 							<!-- /container -->

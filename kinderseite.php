@@ -4,8 +4,7 @@
 <title>Kinderseite</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link href="css/kinderseite.css" rel="stylesheet">
 
 <script
@@ -24,7 +23,7 @@
 
 		<!-- Image on Top of the Web Page -->
 		<div class="row">
-			<img  class="img-fluid" src="Bilder/pizza23.jpg"
+			<img id="img" class="img-fluid" src="Bilder/pizza23.jpg"
 				alt="Pizza Top Page">
 		</div>
 
@@ -51,7 +50,7 @@
 						<!-- Container 1 -->
 						<br>
 
-						<!-- Ãœberschrift der Seite -->
+						<!-- Überschrift der Seite -->
 						<div class="row justify-content-center">
 							<img class="img-fluid" src="Bilder/willkommenText.png"
 								alt="Startseite" style="width: 600px;" class="float-center">
@@ -76,7 +75,7 @@
 										<br /> <br />
 										<button onclick="javascript:clearArea();return false;">Löschen</button>
 
-										<!-- AuswahlmÃ¶glichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
+										<!-- Auswahlmöglichkeit verschiedener StrichstÃ¤rken. Aktuelle StrichstÃ¤rke ist 5 -->
 										Strichstärke : <select id="auswahlStrich">
 											<option value="3">3</option>
 											<option value="5" selected="selected">5</option>
@@ -85,7 +84,7 @@
 											<option value="11">11</option>
 										</select> Farbe : <select id="auswahlFarbe">
 
-											<!-- AuswahlmÃ¶glichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
+											<!-- Auswahlmöglichkeit verschiedener Farben. Aktuelle Farbe ist blau -->
 
 											<option value="blue" selected="selected">blau</option>
 											<option value="red">rot</option>
@@ -94,81 +93,70 @@
 											<option value="gray">grau</option>
 											<option value="black">schwarz</option>
 										</select>
-									</div>
-
-
+									</div><!-- End div -->
 								</div>
-							</div>
+							</div><!-- end container -->
+						</div><!-- row -->
 
-							<br> <br> <br>
-
-
-						</div>
-						<!-- Container 1-->
-					</div>
-					<!-- Col-10 -->
-
-				</div>
-				<!-- div 2 (Row)-->
-
-			</div>
-			<!-- div 1-->
+						</div><!-- Container 1-->
+					</div> <!-- Col-10 -->
+					
+				</div> <!-- div 2 (Row)-->
+	  
+			</div><!-- div 1-->
 			
 			<!-- Fixed footer -->
-			<div class="navbar navbar-inverse navbar-fixed-bottom"
-				role="navigation">
-		<?php include 'footer.php'?>
-	</div>
-
-</div>
-	<script> 
-	var mousePressed = false;
-	var lastX, lastY;
-	var dw;
-	/* Funktion startet die Mausereignisse */
-	function Initialize() {
-		dw = document.getElementById('myCanvas').getContext("2d");
-
-		$('#myCanvas').mousedown(function (e) {
-			mousePressed = true;
-			Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
-		});
-
-		$('#myCanvas').mousemove(function (e) {
-			if (mousePressed) {
-				Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
-			}
-		});
-
-		$('#myCanvas').mouseup(function (e) {
-			mousePressed = false;
-		});
-			$('#myCanvas').mouseleave(function (e) {
-			mousePressed = false;
-		});
-	};
-	/*Funktion zeichnet solange die Maus gedrÃ¼ckt wird */
-	function Draw(x, y, isDown) {
-		if (isDown) {
-			dw.beginPath();
-			dw.strokeStyle = $('#auswahlFarbe').val();
-			dw.lineWidth = $('#auswahlStrich').val();
-			dw.lineJoin = "round";
-			dw.moveTo(lastX, lastY);
-			dw.lineTo(x, y);
-			dw.closePath();
-			dw.stroke();
-		}
-		lastX = x; lastY = y;
-	};
-	/*Funktion ermÃ¶glicht das LÃ¶schen */	
-	function clearArea() {
-		dw.setTransform(1, 0, 0, 1, 0, 0);
-		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);
-	};
-</script>
+			<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+				<?php include 'footer.php'?>
+			</div>
 			
-		
-
+		</div> <!-- Übergeordneter Container -->
+    	<script> 
+    	var mousePressed = false;
+    	var lastX, lastY;
+    	var dw;
+    	/* Funktion startet die Mausereignisse */
+    	function Initialize() {
+    		dw = document.getElementById('myCanvas').getContext("2d");
+    
+    		$('#myCanvas').mousedown(function (e) {
+    			mousePressed = true;
+    			Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
+    		});
+    
+    		$('#myCanvas').mousemove(function (e) {
+    			if (mousePressed) {
+    				Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
+    			}
+    		});
+    
+    		$('#myCanvas').mouseup(function (e) {
+    			mousePressed = false;
+    		});
+    			$('#myCanvas').mouseleave(function (e) {
+    			mousePressed = false;
+    		});
+    	};
+    	/*Funktion zeichnet solange die Maus gedrÃ¼ckt wird */
+    	function Draw(x, y, isDown) {
+    		if (isDown) {
+    			dw.beginPath();
+    			dw.strokeStyle = $('#auswahlFarbe').val();
+    			dw.lineWidth = $('#auswahlStrich').val();
+    			dw.lineJoin = "round";
+    			dw.moveTo(lastX, lastY);
+    			dw.lineTo(x, y);
+    			dw.closePath();
+    			dw.stroke();
+    		}
+    		lastX = x; lastY = y;
+    	};
+    	/*Funktion ermÃ¶glicht das LÃ¶schen */	
+    	function clearArea() {
+    		dw.setTransform(1, 0, 0, 1, 0, 0);
+    		dw.clearRect(0, 0, dw.canvas.width, dw.canvas.height);
+    	};
+    </script>
+			
 </body>
 </html>

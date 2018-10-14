@@ -36,8 +36,6 @@
 						
 					<form>	
 				
-					
-					
 					<div class="banner-text">
 						<h3 class="text-center">Herzlich Willkommen</h3>
 					</div>	
@@ -63,8 +61,9 @@
 								</div>
 							</div>
 						</div>
-						<div id = "kueche"> <a href ="loginkueche.php">Küche</a>
-		</div>	    
+						<div id = "kueche"> 
+							<a href ="loginkueche.php">Küche</a>
+						</div>	    
 					</div>
 				</div>
 				
